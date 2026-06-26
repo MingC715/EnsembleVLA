@@ -9,18 +9,25 @@ Mingchen Song, Xiang Deng, Jie Wei, Dongmei Jiang, Liqiang Nie, Weili Guan
 
 </div>
 
-## Overview
+## Introduction
 
-EnsembleVLA provides lightweight learned energy heads for composing
-Vision-Language-Action policies in RoboTwin2 manipulation tasks. The repository
-contains the evaluation-time composition code, policy adapters, task/config files,
-and best-checkpoint manifests needed to reproduce the released RoboTwin2 results.
+We propose **EnsembleVLA**, an energy-based ensemble policy framework for
+composing Vision-Language-Action policies in RoboTwin2 manipulation tasks.
+Instead of training a single monolithic policy, EnsembleVLA keeps multiple
+pretrained VLA policies frozen and treats their action predictions as
+energy-based candidates. A lightweight learnable composer then combines these
+candidates at the action-distribution level, producing a stronger policy that
+can inherit complementary strengths from diffusion-based and flow-based models.
 
-The code follows the RoboTwin2 simulator, task, camera, embodiment, and policy
-evaluation conventions. The composition interface is aligned with the GPC-style
-policy-composition setup: base policies produce action predictions in their own
-backends, and EnsembleVLA uses a small learned head to score and combine the
-candidate predictions during rollout.
+The framework supports heterogeneous policy composition and keeps evaluation
+close to the original RoboTwin2 rollout interface. During evaluation, each base
+policy proposes actions from its own observation and instruction context;
+EnsembleVLA computes a composed action through energy aggregation and a learned
+residual/gating head, then executes the composed action in the simulator.
+
+<div align="center">
+<img src="docs/images/ensemblevla_overview.png" width="100%" alt="EnsembleVLA overview">
+</div>
 
 ## Environment Setup
 

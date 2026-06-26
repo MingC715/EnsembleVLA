@@ -21,7 +21,7 @@ Jie&nbsp;Wei<sup>1</sup>,
 
 </div>
 
-## Introduction
+## 📖 Introduction
 
 Recent Vision-Language-Action (VLA) models have demonstrated strong capabilities
 in robotic manipulation, yet how to effectively ensemble heterogeneous VLAs
@@ -48,7 +48,7 @@ executed in the simulator for stable task completion.
 <img src="docs/images/ensemblevla_overview.png" width="100%" alt="EnsembleVLA overview">
 </div>
 
-## Environment Setup
+## ⚙️ Environment Setup
 
 This project should be installed on top of a working RoboTwin2 environment. Please
 first follow the official RoboTwin2 documentation for installation, asset download,
@@ -101,10 +101,23 @@ policy/DP3/      # 3D Diffusion Policy backend
 policy/pi05/     # pi0.5 / openpi backend
 ```
 
-Install any additional backend dependencies required by the policies you evaluate,
-following the RoboTwin2 policy pages and the corresponding upstream repositories.
+Then install the EnsembleVLA composition/evaluation dependencies and the base
+policy backends you plan to use:
 
-## Checkpoints
+```bash
+# EnsembleVLA composition & evaluation dependencies
+pip install -r policy/Ensemble-Policy-easy/requirements.txt
+
+# Base policy backends (install the ones you evaluate):
+pip install -e policy/DP                        # Diffusion Policy (DP)
+pip install -e policy/DP3/3D-Diffusion-Policy   # 3D Diffusion Policy (DP3)
+pip install -e policy/pi05                       # pi0.5 / openpi
+```
+
+For backend-specific setup, also follow the RoboTwin2 policy pages and the
+corresponding upstream repositories.
+
+## 📦 Checkpoints
 
 We release both the lightweight EnsembleVLA heads and the required base policy
 checkpoints on Hugging Face:
@@ -170,7 +183,7 @@ Each pi0.5 base also needs `metadata.pt` and the `assets/` folder from the same 
 
 See `docs/checkpoints.md` for the full checkpoint manifest.
 
-## Evaluation
+## 🧪 Evaluation
 
 DP + DP3 example:
 
@@ -199,7 +212,7 @@ task policy1 policy2 gpu ensemble_ckpt camera data_num seed test_num policy1_ckp
 For DP + pi0.5 evaluation, pass the released composition mode argument used by
 `eval_wlearn.sh` and set `policy2_use_pytorch=true`.
 
-## Project Structure
+## 🗂️ Project Structure
 
 ```text
 EnsembleVLA-ICML2026/
@@ -226,12 +239,12 @@ EnsembleVLA-ICML2026/
     +-- dp+pi0.5/
 ```
 
-## Acknowledgement
+## 🙏 Acknowledgement
 
 We thank the open-source projects [RoboTwin2](https://robotwin-platform.github.io/doc/index.html)
 and [GPC](https://github.com/SageCao1125/GPC) for making their code and tools publicly available.
 
-## Citation
+## 📚 Citation
 
 ```bibtex
 @inproceedings{song2026ensemblevla,

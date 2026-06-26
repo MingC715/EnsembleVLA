@@ -210,7 +210,7 @@ class FlowDiffusionComposer:
         force_composer: bool = False,
     ) -> torch.Tensor:
         mode = composition_space or "native_x0_tail"
-        if mode not in {"native_x0_tail", "raw_x0_tail", "x0_raw_tail"}:
+        if mode != "native_x0_tail":
             raise ValueError(f"Unsupported DP + pi0.5 composition mode in release: {mode}")
         return self._compose_native_x0_tail(flow_infer_data, diffusion_infer_data, w_flow, w_diffusion, debug)
 

@@ -23,19 +23,26 @@ Jie&nbsp;Wei<sup>1</sup>,
 
 ## Introduction
 
-We propose **EnsembleVLA**, an energy-based ensemble policy framework for
-composing Vision-Language-Action policies in RoboTwin2 manipulation tasks.
-Instead of training a single monolithic policy, EnsembleVLA keeps multiple
-pretrained VLA policies frozen and treats their action predictions as
-energy-based candidates. A lightweight learnable composer then combines these
-candidates at the action-distribution level, producing a stronger policy that
-can inherit complementary strengths from diffusion-based and flow-based models.
+Recent Vision-Language-Action (VLA) models have demonstrated strong capabilities
+in robotic manipulation, yet how to effectively ensemble heterogeneous VLAs
+remains largely underexplored. Unlike discriminative predictors, generative action
+policies often represent high-dimensional and multimodal action distributions,
+which makes conventional ensemble strategies such as voting or direct action
+averaging insufficient for robust policy composition.
 
-The framework supports heterogeneous policy composition and keeps evaluation
-close to the original RoboTwin2 rollout interface. During evaluation, each base
-policy proposes actions from its own observation and instruction context;
-EnsembleVLA computes a composed action through energy aggregation and a learned
-residual/gating head, then executes the composed action in the simulator.
+We propose **EnsembleVLA**, an energy-based framework for principled composition
+of diverse VLA policies. EnsembleVLA formulates diffusion-based and flow-based
+VLA models under a unified energy perspective, where additive energy aggregation
+naturally induces policy composition at the distribution level. This formulation
+allows multiple pretrained policies to remain frozen while being aggregated into
+a stronger ensemble policy that can exploit their complementary action modes.
+
+Building on this compositional view, EnsembleVLA introduces learnable composition
+weights for dynamic policy balancing, together with a confidence-aware gating
+mechanism that modulates bounded residual corrections. The resulting policy
+maintains compatibility with the RoboTwin2 rollout interface: each base policy is
+queried under its own observation and language context, and the composed action is
+executed in the simulator for stable task completion.
 
 <div align="center">
 <img src="docs/images/ensemblevla_overview.png" width="100%" alt="EnsembleVLA overview">

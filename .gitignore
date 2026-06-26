@@ -40,9 +40,8 @@ policy/DP3/checkpoints
 policy/DP3/checkpoints/
 policy/Ensemble-Policy-easy/already_out/
 
-# Keep released lightweight ensemble checkpoints.
-!policy/Ensemble-Policy-easy/checkpoints/
-!policy/Ensemble-Policy-easy/checkpoints/**
+# Ensemble eval outputs — kept local only, not tracked on GitHub.
+policy/Ensemble-Policy-easy/checkpoints/
 
 
 # Release/evaluation byproducts

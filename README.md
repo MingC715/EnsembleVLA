@@ -106,7 +106,8 @@ following the RoboTwin2 policy pages and the corresponding upstream repositories
 
 ## Checkpoints
 
-We release the EnsembleVLA checkpoints and base policy weights on Hugging Face:
+We release both the lightweight EnsembleVLA heads and the required base policy
+checkpoints on Hugging Face:
 [mingchens/EnsembleVLA](https://huggingface.co/mingchens/EnsembleVLA).
 After downloading the release assets, place or symlink them under
 `best_checkpoint/` using the layout below.
@@ -136,44 +137,36 @@ best_checkpoint/
         +-- assets/<task>/norm_stats.json
 ```
 
-Only inference checkpoints are required for evaluation. See `docs/checkpoints.md`
-for the checkpoint manifest and Hugging Face layout.
+Only inference checkpoints are required for evaluation. Raw optimizer states,
+training logs, and rollout logs are not required.
 
-## Results
+### DP + DP3 Checkpoints
 
-The table reports the best public-code 100-episode evaluation observed with the
-released checkpoints. Physics simulation and motion planning can introduce small
-run-to-run variation.
+| Task | Ensemble head | Base DP checkpoint | Base DP3 checkpoint |
+| --- | --- | --- | --- |
+| `beat_block_hammer` | `best_checkpoint/dp+dp3/beat_block_hammer/ensemble_checkpoint/best.pt` | `best_checkpoint/dp+dp3/beat_block_hammer/base_dp/300.ckpt` | `best_checkpoint/dp+dp3/beat_block_hammer/base_dp3/3000.ckpt` |
+| `open_laptop` | `best_checkpoint/dp+dp3/open_laptop/ensemble_checkpoint/best.pt` | `best_checkpoint/dp+dp3/open_laptop/base_dp/300.ckpt` | `best_checkpoint/dp+dp3/open_laptop/base_dp3/3000.ckpt` |
+| `click_alarmclock` | `best_checkpoint/dp+dp3/click_alarmclock/ensemble_checkpoint/best.pt` | `best_checkpoint/dp+dp3/click_alarmclock/base_dp/100.ckpt` | `best_checkpoint/dp+dp3/click_alarmclock/base_dp3/3000.ckpt` |
+| `move_playingcard_away` | `best_checkpoint/dp+dp3/move_playingcard_away/ensemble_checkpoint/best.pt` | `best_checkpoint/dp+dp3/move_playingcard_away/base_dp/300.ckpt` | `best_checkpoint/dp+dp3/move_playingcard_away/base_dp3/3000.ckpt` |
+| `place_bread_skillet` | `best_checkpoint/dp+dp3/place_bread_skillet/ensemble_checkpoint/best.pt` | `best_checkpoint/dp+dp3/place_bread_skillet/base_dp/100.ckpt` | `best_checkpoint/dp+dp3/place_bread_skillet/base_dp3/100.ckpt` |
+| `dump_bin_bigbin` | `best_checkpoint/dp+dp3/dump_bin_bigbin/ensemble_checkpoint/best.pt` | `best_checkpoint/dp+dp3/dump_bin_bigbin/base_dp/300.ckpt` | `best_checkpoint/dp+dp3/dump_bin_bigbin/base_dp3/100.ckpt` |
+| `handover_block` | `best_checkpoint/dp+dp3/handover_block/ensemble_checkpoint/best.pt` | `best_checkpoint/dp+dp3/handover_block/base_dp/300.ckpt` | `best_checkpoint/dp+dp3/handover_block/base_dp3/100.ckpt` |
+| `stack_bowls_three` | `best_checkpoint/dp+dp3/stack_bowls_three/ensemble_checkpoint/best.pt` | `best_checkpoint/dp+dp3/stack_bowls_three/base_dp/100.ckpt` | `best_checkpoint/dp+dp3/stack_bowls_three/base_dp3/100.ckpt` |
 
-### DP + DP3
+### DP + pi0.5 Checkpoints
 
-| Task | Ensemble checkpoint | Result |
-| --- | --- | ---: |
-| `beat_block_hammer` | `best_checkpoint/dp+dp3/beat_block_hammer/ensemble_checkpoint/best.pt` | 98/100 |
-| `open_laptop` | `best_checkpoint/dp+dp3/open_laptop/ensemble_checkpoint/best.pt` | 93/100 |
-| `click_alarmclock` | `best_checkpoint/dp+dp3/click_alarmclock/ensemble_checkpoint/best.pt` | 100/100 |
-| `move_playingcard_away` | `best_checkpoint/dp+dp3/move_playingcard_away/ensemble_checkpoint/best.pt` | 89/100 |
-| `place_bread_skillet` | `best_checkpoint/dp+dp3/place_bread_skillet/ensemble_checkpoint/best.pt` | 57/100 |
-| `dump_bin_bigbin` | `best_checkpoint/dp+dp3/dump_bin_bigbin/ensemble_checkpoint/best.pt` | 89/100 |
-| `handover_block` | `best_checkpoint/dp+dp3/handover_block/ensemble_checkpoint/best.pt` | 70/100 |
-| `stack_bowls_three` | `best_checkpoint/dp+dp3/stack_bowls_three/ensemble_checkpoint/best.pt` | 76/100 |
+| Task | Ensemble head | Base DP checkpoint | Base pi0.5 checkpoint assets |
+| --- | --- | --- | --- |
+| `beat_block_hammer` | `best_checkpoint/dp+pi0.5/beat_block_hammer/ensemble_checkpoint/best.pt` | `best_checkpoint/dp+pi0.5/beat_block_hammer/base_dp/300.ckpt` | `best_checkpoint/dp+pi0.5/beat_block_hammer/base_pi05_checkpoint_dir/` |
+| `open_laptop` | `best_checkpoint/dp+pi0.5/open_laptop/ensemble_checkpoint/best.pt` | `best_checkpoint/dp+pi0.5/open_laptop/base_dp/300.ckpt` | `best_checkpoint/dp+pi0.5/open_laptop/base_pi05_checkpoint_dir/` |
+| `click_alarmclock` | `best_checkpoint/dp+pi0.5/click_alarmclock/ensemble_checkpoint/best.pt` | `best_checkpoint/dp+pi0.5/click_alarmclock/base_dp/100.ckpt` | `best_checkpoint/dp+pi0.5/click_alarmclock/base_pi05_checkpoint_dir/` |
+| `move_playingcard_away` | `best_checkpoint/dp+pi0.5/move_playingcard_away/ensemble_checkpoint/best.pt` | `best_checkpoint/dp+pi0.5/move_playingcard_away/base_dp/300.ckpt` | `best_checkpoint/dp+pi0.5/move_playingcard_away/base_pi05_checkpoint_dir/` |
+| `place_bread_skillet` | `best_checkpoint/dp+pi0.5/place_bread_skillet/ensemble_checkpoint/best.pt` | `best_checkpoint/dp+pi0.5/place_bread_skillet/base_dp/100.ckpt` | `best_checkpoint/dp+pi0.5/place_bread_skillet/base_pi05_checkpoint_dir/` |
+| `dump_bin_bigbin` | `best_checkpoint/dp+pi0.5/dump_bin_bigbin/ensemble_checkpoint/best.pt` | `best_checkpoint/dp+pi0.5/dump_bin_bigbin/base_dp/300.ckpt` | `best_checkpoint/dp+pi0.5/dump_bin_bigbin/base_pi05_checkpoint_dir/` |
+| `handover_block` | `best_checkpoint/dp+pi0.5/handover_block/ensemble_checkpoint/best.pt` | `best_checkpoint/dp+pi0.5/handover_block/base_dp/300.ckpt` | `best_checkpoint/dp+pi0.5/handover_block/base_pi05_checkpoint_dir/` |
+| `stack_bowls_three` | `best_checkpoint/dp+pi0.5/stack_bowls_three/ensemble_checkpoint/best.pt` | `best_checkpoint/dp+pi0.5/stack_bowls_three/base_dp/100.ckpt` | `best_checkpoint/dp+pi0.5/stack_bowls_three/base_pi05_checkpoint_dir/` |
 
-### DP + pi0.5
-
-All results below use the released DP + pi0.5 evaluation mode with PyTorch pi0.5,
-100 evaluation episodes, and expert-check enabled. `handover_block` uses the
-pi0.5-2000 base checkpoint; the other tasks use pi0.5-1000.
-
-| Task | Ensemble checkpoint | Result |
-| --- | --- | ---: |
-| `beat_block_hammer` | `best_checkpoint/dp+pi0.5/beat_block_hammer/ensemble_checkpoint/best.pt` | 74/100 |
-| `open_laptop` | `best_checkpoint/dp+pi0.5/open_laptop/ensemble_checkpoint/best.pt` | 93/100 |
-| `click_alarmclock` | `best_checkpoint/dp+pi0.5/click_alarmclock/ensemble_checkpoint/best.pt` | 98/100 |
-| `move_playingcard_away` | `best_checkpoint/dp+pi0.5/move_playingcard_away/ensemble_checkpoint/best.pt` | 89/100 |
-| `place_bread_skillet` | `best_checkpoint/dp+pi0.5/place_bread_skillet/ensemble_checkpoint/best.pt` | 55/100 |
-| `dump_bin_bigbin` | `best_checkpoint/dp+pi0.5/dump_bin_bigbin/ensemble_checkpoint/best.pt` | 78/100 |
-| `handover_block` | `best_checkpoint/dp+pi0.5/handover_block/ensemble_checkpoint/best.pt` | 39/100 |
-| `stack_bowls_three` | `best_checkpoint/dp+pi0.5/stack_bowls_three/ensemble_checkpoint/best.pt` | 53/100 |
+See `docs/checkpoints.md` for the full checkpoint manifest.
 
 ## Evaluation
 

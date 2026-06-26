@@ -1,0 +1,20 @@
+{
+  "task": "handover_block",
+  "family": "DP+pi0.5",
+  "composition_mode": "native_x0_tail + sequence_head + PyTorch pi0.5(2000) + expert_check_100",
+  "score": {
+    "success": 39,
+    "total": 100,
+    "percent": 39.0
+  },
+  "reaches_table_target": false,
+  "paths": {
+    "task_dir": "best_checkpoint/dp+pi0.5/handover_block",
+    "ensemble_checkpoint": "best_checkpoint/dp+pi0.5/handover_block/ensemble_checkpoint/best.pt",
+    "base_dp_model": "best_checkpoint/dp+pi0.5/handover_block/base_dp/300.ckpt",
+    "base_pi05_checkpoint_dir": "best_checkpoint/dp+pi0.5/handover_block/base_pi05_checkpoint_dir",
+    "base_pi05_step": "2000"
+  },
+  "note": "Relative release manifest. pi0.5 base checkpoints are large local or external artifacts.",
+  "score_note": "Adopted epoch_12: best archived strict 100-eval result 39/100 under native_x0_tail + sequence_head + pi05=2000, one short of the 40/100 target. Public reruns show high simulator/planner variance (same checkpoint can reproduce around low-to-high 30s); epoch_10_nx0tail_fixed_37pct is retained only as an active comparison candidate until its reruns finish."
+}

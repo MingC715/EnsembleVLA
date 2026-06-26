@@ -1,0 +1,17 @@
+{
+  "task": "handover_block",
+  "family": "DP+DP3",
+  "composition_mode": "diffusion_noise_prediction",
+  "score": {
+    "success": 70,
+    "total": 100,
+    "percent": 70.0
+  },
+  "paths": {
+    "task_dir": "best_checkpoint/dp+dp3/handover_block",
+    "ensemble_checkpoint": "best_checkpoint/dp+dp3/handover_block/ensemble_checkpoint/best.pt",
+    "base_dp_model": "best_checkpoint/dp+dp3/handover_block/base_dp/300.ckpt",
+    "base_dp3_model": "best_checkpoint/dp+dp3/handover_block/base_dp3/100.ckpt"
+  },
+  "note": "Relative release manifest. Base checkpoints are large local or external artifacts."
+}

@@ -1,0 +1,20 @@
+{
+  "task": "beat_block_hammer",
+  "family": "DP+pi0.5",
+  "composition_mode": "native_x0_tail + PyTorch pi0.5 + expert_check_100",
+  "score": {
+    "success": 77,
+    "total": 100,
+    "percent": 77.0
+  },
+  "reaches_table_target": true,
+  "paths": {
+    "task_dir": "best_checkpoint/dp+pi0.5/beat_block_hammer",
+    "ensemble_checkpoint": "best_checkpoint/dp+pi0.5/beat_block_hammer/ensemble_checkpoint/best.pt",
+    "base_dp_model": "best_checkpoint/dp+pi0.5/beat_block_hammer/base_dp/300.ckpt",
+    "base_pi05_checkpoint_dir": "best_checkpoint/dp+pi0.5/beat_block_hammer/base_pi05_checkpoint_dir",
+    "base_pi05_step": "1000"
+  },
+  "note": "Relative release manifest. pi0.5 base checkpoints are large local or external artifacts.",
+  "score_note": "Adopted epoch_55 from restart_20260619_met_confirm: 77/100 under native_x0_tail + PyTorch pi0.5 + expert_check_100."
+}

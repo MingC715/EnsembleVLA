@@ -1,0 +1,19 @@
+{
+  "task": "click_alarmclock",
+  "family": "DP+pi0.5",
+  "composition_mode": "native_x0_tail + PyTorch pi0.5 + expert_check_100",
+  "score": {
+    "success": 99,
+    "total": 100,
+    "percent": 99.0
+  },
+  "reaches_table_target": true,
+  "paths": {
+    "task_dir": "best_checkpoint/dp+pi0.5/click_alarmclock",
+    "ensemble_checkpoint": "best_checkpoint/dp+pi0.5/click_alarmclock/ensemble_checkpoint/best.pt",
+    "base_dp_model": "best_checkpoint/dp+pi0.5/click_alarmclock/base_dp/100.ckpt",
+    "base_pi05_checkpoint_dir": "best_checkpoint/dp+pi0.5/click_alarmclock/base_pi05_checkpoint_dir",
+    "base_pi05_step": "1000"
+  },
+  "note": "Relative release manifest. pi0.5 base checkpoints are large local or external artifacts."
+}

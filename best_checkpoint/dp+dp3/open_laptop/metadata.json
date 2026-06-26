@@ -1,0 +1,17 @@
+{
+  "task": "open_laptop",
+  "family": "DP+DP3",
+  "composition_mode": "diffusion_noise_prediction",
+  "score": {
+    "success": 93,
+    "total": 100,
+    "percent": 93.0
+  },
+  "paths": {
+    "task_dir": "best_checkpoint/dp+dp3/open_laptop",
+    "ensemble_checkpoint": "best_checkpoint/dp+dp3/open_laptop/ensemble_checkpoint/best.pt",
+    "base_dp_model": "best_checkpoint/dp+dp3/open_laptop/base_dp/300.ckpt",
+    "base_dp3_model": "best_checkpoint/dp+dp3/open_laptop/base_dp3/3000.ckpt"
+  },
+  "note": "Relative release manifest. Base checkpoints are large local or external artifacts."
+}

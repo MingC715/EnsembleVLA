@@ -1,0 +1,17 @@
+{
+  "task": "beat_block_hammer",
+  "family": "DP+DP3",
+  "composition_mode": "diffusion_noise_prediction",
+  "score": {
+    "success": 97,
+    "total": 100,
+    "percent": 97.0
+  },
+  "paths": {
+    "task_dir": "best_checkpoint/dp+dp3/beat_block_hammer",
+    "ensemble_checkpoint": "best_checkpoint/dp+dp3/beat_block_hammer/ensemble_checkpoint/best.pt",
+    "base_dp_model": "best_checkpoint/dp+dp3/beat_block_hammer/base_dp/300.ckpt",
+    "base_dp3_model": "best_checkpoint/dp+dp3/beat_block_hammer/base_dp3/3000.ckpt"
+  },
+  "note": "Relative release manifest. Base checkpoints are large local or external artifacts."
+}

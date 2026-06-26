@@ -1,0 +1,9 @@
+task	score_per_100	composition_mode	ensemble_checkpoint	base_dp	base_dp3
+beat_block_hammer	97	diffusion_noise_prediction	best_checkpoint/dp+dp3/beat_block_hammer/ensemble_checkpoint/best.pt	best_checkpoint/dp+dp3/beat_block_hammer/base_dp/300.ckpt	best_checkpoint/dp+dp3/beat_block_hammer/base_dp3/3000.ckpt
+open_laptop	93	diffusion_noise_prediction	best_checkpoint/dp+dp3/open_laptop/ensemble_checkpoint/epoch_1.pt	best_checkpoint/dp+dp3/open_laptop/base_dp/300.ckpt	best_checkpoint/dp+dp3/open_laptop/base_dp3/3000.ckpt
+click_alarmclock	96	diffusion_noise_prediction	best_checkpoint/dp+dp3/click_alarmclock/ensemble_checkpoint/epoch_1.pt	best_checkpoint/dp+dp3/click_alarmclock/base_dp/100.ckpt	best_checkpoint/dp+dp3/click_alarmclock/base_dp3/3000.ckpt
+move_playingcard_away	89	diffusion_noise_prediction	best_checkpoint/dp+dp3/move_playingcard_away/ensemble_checkpoint/epoch_1.pt	best_checkpoint/dp+dp3/move_playingcard_away/base_dp/300.ckpt	best_checkpoint/dp+dp3/move_playingcard_away/base_dp3/3000.ckpt
+place_bread_skillet	55	diffusion_noise_prediction	best_checkpoint/dp+dp3/place_bread_skillet/ensemble_checkpoint/epoch_5.pt	best_checkpoint/dp+dp3/place_bread_skillet/base_dp/100.ckpt	best_checkpoint/dp+dp3/place_bread_skillet/base_dp3/100.ckpt
+dump_bin_bigbin	88	diffusion_noise_prediction	best_checkpoint/dp+dp3/dump_bin_bigbin/ensemble_checkpoint/epoch_50.pt	best_checkpoint/dp+dp3/dump_bin_bigbin/base_dp/300.ckpt	best_checkpoint/dp+dp3/dump_bin_bigbin/base_dp3/100.ckpt
+handover_block	70	diffusion_noise_prediction	best_checkpoint/dp+dp3/handover_block/ensemble_checkpoint/epoch_1.pt	best_checkpoint/dp+dp3/handover_block/base_dp/300.ckpt	best_checkpoint/dp+dp3/handover_block/base_dp3/100.ckpt
+stack_bowls_three	74	diffusion_noise_prediction	best_checkpoint/dp+dp3/stack_bowls_three/ensemble_checkpoint/epoch_1.pt	best_checkpoint/dp+dp3/stack_bowls_three/base_dp/100.ckpt	best_checkpoint/dp+dp3/stack_bowls_three/base_dp3/100.ckpt

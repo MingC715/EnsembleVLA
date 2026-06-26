@@ -1,0 +1,74 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.pytest_cache/
+.mypy_cache/
+
+# Local/editor
+.DS_Store
+.vscode/
+.idea/
+external/
+
+# Experiment outputs
+data/
+outputs/
+log/
+logs/
+wandb/
+result/
+eval_video/
+eval_result/
+already_res/
+collect_data.sh
+script/*
+!script/
+!script/__init__.py
+!script/eval_policy.py
+
+# Large simulator assets; download externally.
+assets
+assets/
+!assets/_download.py
+envs/curobo/
+
+# Large base policy checkpoints; use docs/dp_dp3_checkpoints.md.
+policy/DP/checkpoints
+policy/DP/checkpoints/
+policy/DP3/checkpoints
+policy/DP3/checkpoints/
+policy/Ensemble-Policy-easy/already_out/
+
+# Keep released lightweight ensemble checkpoints.
+!policy/Ensemble-Policy-easy/checkpoints/
+!policy/Ensemble-Policy-easy/checkpoints/**
+
+
+# Release/evaluation byproducts
+eval_logs/
+eval_seed_lists/
+*.log
+nohup.out
+policy/*external_link*
+policy/*symlink_manifest*
+**/optimizer.pt
+
+# Archives and temporary files
+*.zip
+*.tar
+*.tar.gz
+*.tmp
+*.bak*
+*~
+# Local checkpoint archive payloads. Keep manifests and lightweight ensemble heads in Git;
+# host large base models and raw provenance logs externally or with Git LFS.
+best_checkpoint/**/base_dp/
+best_checkpoint/**/base_dp3/
+best_checkpoint/**/base_pi05_checkpoint_dir/
+best_checkpoint/**/hydra/
+best_checkpoint/**/eval_log/
+!best_checkpoint/**/ensemble_checkpoint/
+!best_checkpoint/**/*.json
+!best_checkpoint/**/*.tsv
+

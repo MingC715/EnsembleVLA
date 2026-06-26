@@ -1,0 +1,65 @@
+# Ensemble Policy Requirements
+# Generated for RoboTwin 2.0 - Ensemble Policy Training and Evaluation
+# Python 3.10.19
+
+# Core Deep Learning Frameworks
+torch==2.4.1
+torchvision==0.19.1
+numpy==1.26.4
+
+# Configuration and Experiment Management
+hydra-core==1.3.2
+omegaconf==2.3.0
+PyYAML==6.0.3
+
+# Data Processing and Storage
+zarr==2.18.3
+h5py==3.15.1
+opencv-python==4.11.0.86
+
+# Progress and Logging
+tqdm==4.67.1
+
+# Robotics and Simulation
+sapien==3.0.0b1
+nvidia_curobo==0.7.7.post1.dev5
+transforms3d==0.4.2
+pyquaternion==0.9.9
+
+# 3D Processing
+open3d==0.18.0
+trimesh==4.4.3
+pytorch3d==0.7.6
+
+# Diffusion Policy Dependencies
+diffusers==0.21.0
+einops==0.8.1
+
+# Utilities
+pyyaml-include==1.4.1
+scipy==1.15.3
+matplotlib==3.10.8
+pillow==11.3.0
+imageio==2.34.2
+
+# Development Tools
+pytest==9.0.2
+ipython==8.37.0
+
+# Optional: For OpenVLA integration
+transformers==4.48.1
+accelerate==1.12.0
+peft==0.11.1
+tokenizers==0.21.4
+safetensors==0.7.0
+
+# Optional: For visualization
+plotly==6.5.0
+dash==3.3.0
+
+# System Dependencies
+# Note: Some packages may require system-level dependencies:
+# - CUDA 12.1+ for GPU support
+# - EGL for headless rendering
+# - OpenGL libraries for SAPIEN
+

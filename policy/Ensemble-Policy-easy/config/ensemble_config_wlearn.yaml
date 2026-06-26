@@ -1,0 +1,66 @@
+# Ensemble Policy Configuration - Weight Learning Version
+
+defaults:
+  - _self_
+
+# Task configuration
+task:
+  name: beat_block_hammer
+  dataset:
+    horizon: 8
+
+# Policy configuration
+policy1:
+  type: DP  # Released policy1: DP
+  checkpoint: null
+  use_pytorch: null
+
+policy2:
+  type: DP3  # Released policy2: DP3 or pi05
+  checkpoint: null
+  use_pytorch: null
+
+# Composition weights (initial values, WILL BE LEARNED)
+dp_w: 0.1
+dp3_w: 0.9
+
+# Composition configuration. DP+pi0.5 release mode is native_x0_tail.
+composition_mode: native_x0_tail
+
+# Action dimension
+action_dim: 14
+
+# Camera configuration
+head_camera_type: L515
+expert_data_num: 100
+
+# Energy head configuration
+ebm:
+  hidden_dim: 64
+  num_layers: 2
+  max_delta: 0.001
+  use_spectral_norm: true
+  init_gate_bias: -2.0
+  use_base_context: false
+
+# Seed and legacy training fields kept for checkpoint compatibility
+training:
+  seed: 0
+  batch_size: 64
+  num_epochs: 100
+  head_lr: 1e-5
+  weight_lr: 1e-4
+  weight_decay: 1e-6
+  max_grad_norm: 1.0
+  use_scheduler: true
+  val_every: 1
+  save_every: 1
+  num_workers: 4
+
+# Evaluation configuration
+eval:
+  test_num: 100
+  checkpoint_num: best
+
+# Output directory (will be set by script)
+output_dir: null

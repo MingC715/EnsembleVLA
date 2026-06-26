@@ -1,0 +1,138 @@
+[
+  {
+    "task": "beat_block_hammer",
+    "family": "DP+DP3",
+    "composition_mode": "diffusion_noise_prediction",
+    "score": {
+      "success": 97,
+      "total": 100,
+      "percent": 97.0
+    },
+    "paths": {
+      "task_dir": "best_checkpoint/dp+dp3/beat_block_hammer",
+      "ensemble_checkpoint": "best_checkpoint/dp+dp3/beat_block_hammer/ensemble_checkpoint/best.pt",
+      "base_dp_model": "best_checkpoint/dp+dp3/beat_block_hammer/base_dp/300.ckpt",
+      "base_dp3_model": "best_checkpoint/dp+dp3/beat_block_hammer/base_dp3/3000.ckpt"
+    },
+    "note": "Relative release manifest. Base checkpoints are large local or external artifacts."
+  },
+  {
+    "task": "open_laptop",
+    "family": "DP+DP3",
+    "composition_mode": "diffusion_noise_prediction",
+    "score": {
+      "success": 93,
+      "total": 100,
+      "percent": 93.0
+    },
+    "paths": {
+      "task_dir": "best_checkpoint/dp+dp3/open_laptop",
+      "ensemble_checkpoint": "best_checkpoint/dp+dp3/open_laptop/ensemble_checkpoint/best.pt",
+      "base_dp_model": "best_checkpoint/dp+dp3/open_laptop/base_dp/300.ckpt",
+      "base_dp3_model": "best_checkpoint/dp+dp3/open_laptop/base_dp3/3000.ckpt"
+    },
+    "note": "Relative release manifest. Base checkpoints are large local or external artifacts."
+  },
+  {
+    "task": "click_alarmclock",
+    "family": "DP+DP3",
+    "composition_mode": "diffusion_noise_prediction",
+    "score": {
+      "success": 100,
+      "total": 100,
+      "percent": 100.0
+    },
+    "paths": {
+      "task_dir": "best_checkpoint/dp+dp3/click_alarmclock",
+      "ensemble_checkpoint": "best_checkpoint/dp+dp3/click_alarmclock/ensemble_checkpoint/best.pt",
+      "base_dp_model": "best_checkpoint/dp+dp3/click_alarmclock/base_dp/100.ckpt",
+      "base_dp3_model": "best_checkpoint/dp+dp3/click_alarmclock/base_dp3/3000.ckpt"
+    },
+    "note": "Relative release manifest. Base checkpoints are large local or external artifacts."
+  },
+  {
+    "task": "move_playingcard_away",
+    "family": "DP+DP3",
+    "composition_mode": "diffusion_noise_prediction",
+    "score": {
+      "success": 89,
+      "total": 100,
+      "percent": 89.0
+    },
+    "paths": {
+      "task_dir": "best_checkpoint/dp+dp3/move_playingcard_away",
+      "ensemble_checkpoint": "best_checkpoint/dp+dp3/move_playingcard_away/ensemble_checkpoint/best.pt",
+      "base_dp_model": "best_checkpoint/dp+dp3/move_playingcard_away/base_dp/300.ckpt",
+      "base_dp3_model": "best_checkpoint/dp+dp3/move_playingcard_away/base_dp3/3000.ckpt"
+    },
+    "note": "Relative release manifest. Base checkpoints are large local or external artifacts."
+  },
+  {
+    "task": "place_bread_skillet",
+    "family": "DP+DP3",
+    "composition_mode": "diffusion_noise_prediction",
+    "score": {
+      "success": 55,
+      "total": 100,
+      "percent": 55.0
+    },
+    "paths": {
+      "task_dir": "best_checkpoint/dp+dp3/place_bread_skillet",
+      "ensemble_checkpoint": "best_checkpoint/dp+dp3/place_bread_skillet/ensemble_checkpoint/best.pt",
+      "base_dp_model": "best_checkpoint/dp+dp3/place_bread_skillet/base_dp/100.ckpt",
+      "base_dp3_model": "best_checkpoint/dp+dp3/place_bread_skillet/base_dp3/100.ckpt"
+    },
+    "note": "Relative release manifest. Base checkpoints are large local or external artifacts."
+  },
+  {
+    "task": "dump_bin_bigbin",
+    "family": "DP+DP3",
+    "composition_mode": "diffusion_noise_prediction",
+    "score": {
+      "success": 89,
+      "total": 100,
+      "percent": 89.0
+    },
+    "paths": {
+      "task_dir": "best_checkpoint/dp+dp3/dump_bin_bigbin",
+      "ensemble_checkpoint": "best_checkpoint/dp+dp3/dump_bin_bigbin/ensemble_checkpoint/best.pt",
+      "base_dp_model": "best_checkpoint/dp+dp3/dump_bin_bigbin/base_dp/300.ckpt",
+      "base_dp3_model": "best_checkpoint/dp+dp3/dump_bin_bigbin/base_dp3/100.ckpt"
+    },
+    "note": "Relative release manifest. Base checkpoints are large local or external artifacts."
+  },
+  {
+    "task": "handover_block",
+    "family": "DP+DP3",
+    "composition_mode": "diffusion_noise_prediction",
+    "score": {
+      "success": 70,
+      "total": 100,
+      "percent": 70.0
+    },
+    "paths": {
+      "task_dir": "best_checkpoint/dp+dp3/handover_block",
+      "ensemble_checkpoint": "best_checkpoint/dp+dp3/handover_block/ensemble_checkpoint/best.pt",
+      "base_dp_model": "best_checkpoint/dp+dp3/handover_block/base_dp/300.ckpt",
+      "base_dp3_model": "best_checkpoint/dp+dp3/handover_block/base_dp3/100.ckpt"
+    },
+    "note": "Relative release manifest. Base checkpoints are large local or external artifacts."
+  },
+  {
+    "task": "stack_bowls_three",
+    "family": "DP+DP3",
+    "composition_mode": "diffusion_noise_prediction",
+    "score": {
+      "success": 74,
+      "total": 100,
+      "percent": 74.0
+    },
+    "paths": {
+      "task_dir": "best_checkpoint/dp+dp3/stack_bowls_three",
+      "ensemble_checkpoint": "best_checkpoint/dp+dp3/stack_bowls_three/ensemble_checkpoint/best.pt",
+      "base_dp_model": "best_checkpoint/dp+dp3/stack_bowls_three/base_dp/100.ckpt",
+      "base_dp3_model": "best_checkpoint/dp+dp3/stack_bowls_three/base_dp3/100.ckpt"
+    },
+    "note": "Relative release manifest. Base checkpoints are large local or external artifacts."
+  }
+]

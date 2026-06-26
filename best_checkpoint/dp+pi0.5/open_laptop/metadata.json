@@ -1,0 +1,20 @@
+{
+  "task": "open_laptop",
+  "family": "DP+pi0.5",
+  "composition_mode": "native_x0_tail + base_context + max_delta=0.08 + sequence_head + PyTorch pi0.5(1000) + expert_check_100",
+  "score": {
+    "success": 93,
+    "total": 100,
+    "percent": 93.0
+  },
+  "reaches_table_target": false,
+  "paths": {
+    "task_dir": "best_checkpoint/dp+pi0.5/open_laptop",
+    "ensemble_checkpoint": "best_checkpoint/dp+pi0.5/open_laptop/ensemble_checkpoint/best.pt",
+    "base_dp_model": "best_checkpoint/dp+pi0.5/open_laptop/base_dp/300.ckpt",
+    "base_pi05_checkpoint_dir": "best_checkpoint/dp+pi0.5/open_laptop/base_pi05_checkpoint_dir",
+    "base_pi05_step": "1000"
+  },
+  "note": "Relative release manifest. pi0.5 base checkpoints are large local or external artifacts.",
+  "score_note": "Adopted epoch_13: best scanned strict 100-eval result 93/100 under native_x0_tail + base_context + max_delta=0.08 + sequence_head; below table target 95."
+}

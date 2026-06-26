@@ -1,0 +1,158 @@
+[
+  {
+    "task": "beat_block_hammer",
+    "family": "DP+pi0.5",
+    "composition_mode": "native_x0_tail + PyTorch pi0.5 + expert_check_100",
+    "score": {
+      "success": 77,
+      "total": 100,
+      "percent": 77.0
+    },
+    "reaches_table_target": true,
+    "paths": {
+      "task_dir": "best_checkpoint/dp+pi0.5/beat_block_hammer",
+      "ensemble_checkpoint": "best_checkpoint/dp+pi0.5/beat_block_hammer/ensemble_checkpoint/best.pt",
+      "base_dp_model": "best_checkpoint/dp+pi0.5/beat_block_hammer/base_dp/300.ckpt",
+      "base_pi05_checkpoint_dir": "best_checkpoint/dp+pi0.5/beat_block_hammer/base_pi05_checkpoint_dir",
+      "base_pi05_step": "1000"
+    },
+    "note": "Relative release manifest. pi0.5 base checkpoints are large local or external artifacts.",
+    "score_note": "Adopted epoch_55 from restart_20260619_met_confirm: 77/100."
+  },
+  {
+    "task": "open_laptop",
+    "family": "DP+pi0.5",
+    "composition_mode": "native_x0_tail + PyTorch pi0.5 + expert_check_100",
+    "score": {
+      "success": 93,
+      "total": 100,
+      "percent": 93.0
+    },
+    "reaches_table_target": false,
+    "paths": {
+      "task_dir": "best_checkpoint/dp+pi0.5/open_laptop",
+      "ensemble_checkpoint": "best_checkpoint/dp+pi0.5/open_laptop/ensemble_checkpoint/best.pt",
+      "base_dp_model": "best_checkpoint/dp+pi0.5/open_laptop/base_dp/300.ckpt",
+      "base_pi05_checkpoint_dir": "best_checkpoint/dp+pi0.5/open_laptop/base_pi05_checkpoint_dir",
+      "base_pi05_step": "1000"
+    },
+    "note": "Relative release manifest. pi0.5 base checkpoints are large local or external artifacts.",
+    "score_note": "Adopted epoch_13: best scanned strict 100-eval result 93/100."
+  },
+  {
+    "task": "click_alarmclock",
+    "family": "DP+pi0.5",
+    "composition_mode": "native_x0_tail + PyTorch pi0.5 + expert_check_100",
+    "score": {
+      "success": 99,
+      "total": 100,
+      "percent": 99.0
+    },
+    "reaches_table_target": true,
+    "paths": {
+      "task_dir": "best_checkpoint/dp+pi0.5/click_alarmclock",
+      "ensemble_checkpoint": "best_checkpoint/dp+pi0.5/click_alarmclock/ensemble_checkpoint/best.pt",
+      "base_dp_model": "best_checkpoint/dp+pi0.5/click_alarmclock/base_dp/100.ckpt",
+      "base_pi05_checkpoint_dir": "best_checkpoint/dp+pi0.5/click_alarmclock/base_pi05_checkpoint_dir",
+      "base_pi05_step": "1000"
+    },
+    "note": "Relative release manifest. pi0.5 base checkpoints are large local or external artifacts."
+  },
+  {
+    "task": "move_playingcard_away",
+    "family": "DP+pi0.5",
+    "composition_mode": "native_x0_tail + PyTorch pi0.5 + expert_check_100",
+    "score": {
+      "success": 87,
+      "total": 100,
+      "percent": 87.0
+    },
+    "reaches_table_target": false,
+    "paths": {
+      "task_dir": "best_checkpoint/dp+pi0.5/move_playingcard_away",
+      "ensemble_checkpoint": "best_checkpoint/dp+pi0.5/move_playingcard_away/ensemble_checkpoint/best.pt",
+      "base_dp_model": "best_checkpoint/dp+pi0.5/move_playingcard_away/base_dp/300.ckpt",
+      "base_pi05_checkpoint_dir": "best_checkpoint/dp+pi0.5/move_playingcard_away/base_pi05_checkpoint_dir",
+      "base_pi05_step": "1000"
+    },
+    "note": "Relative release manifest. pi0.5 base checkpoints are large local or external artifacts.",
+    "score_note": "Adopted epoch_2 Plan-B md05: best scanned strict 100-eval result 87/100."
+  },
+  {
+    "task": "place_bread_skillet",
+    "family": "DP+pi0.5",
+    "composition_mode": "native_x0_tail + PyTorch pi0.5 + expert_check_100",
+    "score": {
+      "success": 54,
+      "total": 100,
+      "percent": 54.0
+    },
+    "reaches_table_target": true,
+    "paths": {
+      "task_dir": "best_checkpoint/dp+pi0.5/place_bread_skillet",
+      "ensemble_checkpoint": "best_checkpoint/dp+pi0.5/place_bread_skillet/ensemble_checkpoint/best.pt",
+      "base_dp_model": "best_checkpoint/dp+pi0.5/place_bread_skillet/base_dp/100.ckpt",
+      "base_pi05_checkpoint_dir": "best_checkpoint/dp+pi0.5/place_bread_skillet/base_pi05_checkpoint_dir",
+      "base_pi05_step": "1000"
+    },
+    "note": "Relative release manifest. pi0.5 base checkpoints are large local or external artifacts."
+  },
+  {
+    "task": "dump_bin_bigbin",
+    "family": "DP+pi0.5",
+    "composition_mode": "native_x0_tail + PyTorch pi0.5 + expert_check_100",
+    "score": {
+      "success": 76,
+      "total": 100,
+      "percent": 76.0
+    },
+    "reaches_table_target": true,
+    "paths": {
+      "task_dir": "best_checkpoint/dp+pi0.5/dump_bin_bigbin",
+      "ensemble_checkpoint": "best_checkpoint/dp+pi0.5/dump_bin_bigbin/ensemble_checkpoint/best.pt",
+      "base_dp_model": "best_checkpoint/dp+pi0.5/dump_bin_bigbin/base_dp/300.ckpt",
+      "base_pi05_checkpoint_dir": "best_checkpoint/dp+pi0.5/dump_bin_bigbin/base_pi05_checkpoint_dir",
+      "base_pi05_step": "1000"
+    },
+    "note": "Relative release manifest. pi0.5 base checkpoints are large local or external artifacts.",
+    "score_note": "Adopted epoch_8: public release-code strict expert-check 100-eval reached 76/100; replaced weaker epoch_12_nx0tail_76pct rerun (70/100)."
+  },
+  {
+    "task": "handover_block",
+    "family": "DP+pi0.5",
+    "composition_mode": "native_x0_tail + PyTorch pi0.5 + expert_check_100",
+    "score": {
+      "success": 39,
+      "total": 100,
+      "percent": 39.0
+    },
+    "reaches_table_target": false,
+    "paths": {
+      "task_dir": "best_checkpoint/dp+pi0.5/handover_block",
+      "ensemble_checkpoint": "best_checkpoint/dp+pi0.5/handover_block/ensemble_checkpoint/best.pt",
+      "base_dp_model": "best_checkpoint/dp+pi0.5/handover_block/base_dp/300.ckpt",
+      "base_pi05_checkpoint_dir": "best_checkpoint/dp+pi0.5/handover_block/base_pi05_checkpoint_dir",
+      "base_pi05_step": "2000"
+    },
+    "note": "Relative release manifest. pi0.5 base checkpoints are large local or external artifacts."
+  },
+  {
+    "task": "stack_bowls_three",
+    "family": "DP+pi0.5",
+    "composition_mode": "native_x0_tail + PyTorch pi0.5 + expert_check_100",
+    "score": {
+      "success": 52,
+      "total": 100,
+      "percent": 52.0
+    },
+    "reaches_table_target": true,
+    "paths": {
+      "task_dir": "best_checkpoint/dp+pi0.5/stack_bowls_three",
+      "ensemble_checkpoint": "best_checkpoint/dp+pi0.5/stack_bowls_three/ensemble_checkpoint/best.pt",
+      "base_dp_model": "best_checkpoint/dp+pi0.5/stack_bowls_three/base_dp/100.ckpt",
+      "base_pi05_checkpoint_dir": "best_checkpoint/dp+pi0.5/stack_bowls_three/base_pi05_checkpoint_dir",
+      "base_pi05_step": "1000"
+    },
+    "note": "Relative release manifest. pi0.5 base checkpoints are large local or external artifacts."
+  }
+]

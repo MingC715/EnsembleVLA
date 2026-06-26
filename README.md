@@ -2,10 +2,23 @@
 
 # EnsembleVLA: Ensemble Learning for Vision-Language Action Models
 
-Mingchen Song, Xiang Deng, Jie Wei, Dongmei Jiang, Liqiang Nie, Weili Guan
-
+<div>
+Mingchen&nbsp;Song<sup>1 2</sup>,
+<a target="_blank" href="https://homepage.hit.edu.cn/dengxiang">Xiang&nbsp;Deng</a><sup>1 3†</sup>,
+Jie&nbsp;Wei<sup>1</sup>,
+<a target="_blank" href="https://scholar.google.com/citations?hl=en&user=Awsue7sAAAAJ">Dongmei&nbsp;Jiang</a><sup>2</sup>,
+<a target="_blank" href="https://scholar.google.com/citations?hl=en&user=yywVMhUAAAAJ">Liqiang&nbsp;Nie</a><sup>1</sup>,
+<a target="_blank" href="https://ieeexplore.ieee.org/author/37087008154">Weili&nbsp;Guan</a><sup>1 3†</sup>
+</div>
+<sup>1</sup>Harbin Institute of Technology, Shenzhen&nbsp;&nbsp;
+<sup>2</sup>PengCheng Laboratory&nbsp;&nbsp;
+<sup>3</sup>Shenzhen Loop Area Institute
+<br>
+<sup>†</sup>Corresponding author
+<br><br>
 <a href="#"><img src="https://img.shields.io/badge/Paper-coming_soon-deepgreen" alt="Paper"></a>
-<a href="#"><img src="https://img.shields.io/badge/Code-GitHub-black" alt="GitHub"></a>
+<a href="https://github.com/MingC715/EnsembleVLA" target="_blank"><img src="https://img.shields.io/badge/Code-GitHub-black" alt="GitHub"></a>
+<a href="https://huggingface.co/mingchens/EnsembleVLA" target="_blank"><img src="https://img.shields.io/badge/Checkpoints-HuggingFace-yellow" alt="Hugging Face"></a>
 
 </div>
 
@@ -41,8 +54,8 @@ configuration files, and policy evaluation:
 A typical setup is:
 
 ```bash
-git clone https://github.com/<your-org>/EnsembleVLA-ICML2026.git
-cd EnsembleVLA-ICML2026
+git clone https://github.com/MingC715/EnsembleVLA.git
+cd EnsembleVLA
 
 conda create -n RoboTwin python=3.10 -y
 conda activate RoboTwin
@@ -87,9 +100,18 @@ following the RoboTwin2 policy pages and the corresponding upstream repositories
 
 ## Checkpoints
 
-The lightweight EnsembleVLA heads and base policy weights will be uploaded to
-Hugging Face. After downloading the release assets, place or symlink them under
+We release the EnsembleVLA checkpoints and base policy weights on Hugging Face:
+[mingchens/EnsembleVLA](https://huggingface.co/mingchens/EnsembleVLA).
+After downloading the release assets, place or symlink them under
 `best_checkpoint/` using the layout below.
+
+Download with Git LFS:
+
+```bash
+git lfs install
+git clone https://huggingface.co/mingchens/EnsembleVLA hf_assets
+rsync -a hf_assets/best_checkpoint/ best_checkpoint/
+```
 
 Expected best-checkpoint layout:
 
@@ -132,9 +154,9 @@ run-to-run variation.
 
 ### DP + pi0.5
 
-All results below use `native_x0_tail + PyTorch pi0.5 + 100 eval + expert check
-enabled`. `handover_block` uses the pi0.5-2000 base checkpoint; the other tasks
-use pi0.5-1000.
+All results below use the released DP + pi0.5 evaluation mode with PyTorch pi0.5,
+100 evaluation episodes, and expert-check enabled. `handover_block` uses the
+pi0.5-2000 base checkpoint; the other tasks use pi0.5-1000.
 
 | Task | Ensemble checkpoint | Result |
 | --- | --- | ---: |
@@ -164,8 +186,7 @@ DP + pi0.5 example:
 conda activate RoboTwin
 bash policy/Ensemble-Policy-easy/eval_wlearn.sh \
   click_alarmclock DP pi05 0 best L515 100 0 100 100 1000 \
-  best_checkpoint/dp+pi0.5/click_alarmclock/ensemble_checkpoint \
-  native_x0_tail true
+  best_checkpoint/dp+pi0.5/click_alarmclock/ensemble_checkpoint
 ```
 
 Arguments:
@@ -174,8 +195,8 @@ Arguments:
 task policy1 policy2 gpu ensemble_ckpt camera data_num seed test_num policy1_ckpt policy2_ckpt output_dir [composition_mode] [policy2_use_pytorch]
 ```
 
-For DP + pi0.5 evaluation, use `composition_mode=native_x0_tail` and
-`policy2_use_pytorch=true`.
+For DP + pi0.5 evaluation, pass the released composition mode argument used by
+`eval_wlearn.sh` and set `policy2_use_pytorch=true`.
 
 ## Project Structure
 

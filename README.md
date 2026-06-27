@@ -155,7 +155,7 @@ training logs, and rollout logs are not required.
 
 ### DP + DP3 Checkpoints
 
-| Task | Ensemble head | Base DP checkpoint | Base DP3 checkpoint |
+| Task | Ensemble policy checkpoint | Base DP checkpoint | Base DP3 checkpoint |
 | --- | --- | --- | --- |
 | `beat_block_hammer` | [`best_checkpoint/dp+dp3/beat_block_hammer/ensemble_checkpoint/best.pt`](https://huggingface.co/mingchens/EnsembleVLA/blob/main/dp+dp3/beat_block_hammer/ensemble_checkpoint/best.pt) | [`best_checkpoint/dp+dp3/beat_block_hammer/base_dp/300.ckpt`](https://huggingface.co/mingchens/EnsembleVLA/blob/main/dp+dp3/beat_block_hammer/base_dp/300.ckpt) | [`best_checkpoint/dp+dp3/beat_block_hammer/base_dp3/3000.ckpt`](https://huggingface.co/mingchens/EnsembleVLA/blob/main/dp+dp3/beat_block_hammer/base_dp3/3000.ckpt) |
 | `open_laptop` | [`best_checkpoint/dp+dp3/open_laptop/ensemble_checkpoint/best.pt`](https://huggingface.co/mingchens/EnsembleVLA/blob/main/dp+dp3/open_laptop/ensemble_checkpoint/best.pt) | [`best_checkpoint/dp+dp3/open_laptop/base_dp/300.ckpt`](https://huggingface.co/mingchens/EnsembleVLA/blob/main/dp+dp3/open_laptop/base_dp/300.ckpt) | [`best_checkpoint/dp+dp3/open_laptop/base_dp3/3000.ckpt`](https://huggingface.co/mingchens/EnsembleVLA/blob/main/dp+dp3/open_laptop/base_dp3/3000.ckpt) |
@@ -168,7 +168,7 @@ training logs, and rollout logs are not required.
 
 ### DP + pi0.5 Checkpoints
 
-| Task | Ensemble head | Base DP checkpoint | Base pi0.5 checkpoint |
+| Task | Ensemble policy checkpoint | Base DP checkpoint | Base pi0.5 checkpoint |
 | --- | --- | --- | --- |
 | `beat_block_hammer` | [`best_checkpoint/dp+pi0.5/beat_block_hammer/ensemble_checkpoint/best.pt`](https://huggingface.co/mingchens/EnsembleVLA/blob/main/dp+pi0.5/beat_block_hammer/ensemble_checkpoint/best.pt) | [`best_checkpoint/dp+pi0.5/beat_block_hammer/base_dp/300.ckpt`](https://huggingface.co/mingchens/EnsembleVLA/blob/main/dp+pi0.5/beat_block_hammer/base_dp/300.ckpt) | [`best_checkpoint/dp+pi0.5/beat_block_hammer/base_pi05_checkpoint_dir/model.safetensors`](https://huggingface.co/mingchens/EnsembleVLA/blob/main/dp+pi0.5/beat_block_hammer/base_pi05_checkpoint_dir/model.safetensors) |
 | `open_laptop` | [`best_checkpoint/dp+pi0.5/open_laptop/ensemble_checkpoint/best.pt`](https://huggingface.co/mingchens/EnsembleVLA/blob/main/dp+pi0.5/open_laptop/ensemble_checkpoint/best.pt) | [`best_checkpoint/dp+pi0.5/open_laptop/base_dp/300.ckpt`](https://huggingface.co/mingchens/EnsembleVLA/blob/main/dp+pi0.5/open_laptop/base_dp/300.ckpt) | [`best_checkpoint/dp+pi0.5/open_laptop/base_pi05_checkpoint_dir/model.safetensors`](https://huggingface.co/mingchens/EnsembleVLA/blob/main/dp+pi0.5/open_laptop/base_pi05_checkpoint_dir/model.safetensors) |

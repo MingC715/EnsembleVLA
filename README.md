@@ -1,6 +1,6 @@
 <div align="center">
 
-# EnsembleVLA: Ensemble Learning for Vision-Language Action Models
+# EnsembleVLA: Ensemble Learning for Vision-Language Action Models (ICML 2026)
 
 <div>
 Mingchen&nbsp;Song<sup>1 2</sup>,
